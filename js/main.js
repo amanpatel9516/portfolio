@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatCounters();
   initGalleryFallback();
   initCertLightbox();
+  initTheme();
 });
 
 
@@ -343,5 +344,32 @@ function initCertLightbox() {
   certLB.querySelector('.cert-lightbox-backdrop')?.addEventListener('click', closeCert);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && certLB.classList.contains('active')) closeCert();
+  });
+}
+
+/* ─── THEME TOGGLE ───────────────────────────────────────────── */
+function initTheme() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (!toggleBtn) return;
+
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  const icon = toggleBtn.querySelector('i');
+
+  if (currentTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    icon.classList.replace('fa-moon', 'fa-sun');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+      icon.classList.replace('fa-sun', 'fa-moon');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
   });
 }
