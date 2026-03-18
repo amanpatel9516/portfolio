@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Patel — AI & Machine Learning Engineer | Backend Developer</title>
+  <meta name="description"
+    content="Portfolio of Aman Patel — AI & ML Engineer, Backend Developer, CS student at LPU. AI Trainer at Outlier AI. 500+ DSA problems solved." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- CINEMATIC INTRO OVERLAY                                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="cinematic-intro" class="intro-overlay">
+    <!-- Matrix code rain background -->
+    <canvas id="intro-matrix" class="intro-matrix"></canvas>
+    <!-- Energy pulse rings -->
+    <div class="intro-energy">
+      <div class="energy-ring energy-ring--1"></div>
+      <div class="energy-ring energy-ring--2"></div>
+      <div class="energy-ring energy-ring--3"></div>
+      <div class="energy-ring energy-ring--4"></div>
+    </div>
+    <!-- Shockwave boom circle -->
+    <div class="intro-shockwave" id="intro-shockwave"></div>
+    
+    <!-- AI Core / Eye Element -->
+    <div class="intro-ai-core" id="intro-ai-core">
+      <div class="core-iris"></div>
+      <div class="core-pupil"></div>
+      <div class="core-scanner"></div>
+    </div>
+
+    <!-- Flash overlay -->
+    <div class="intro-flash" id="intro-flash"></div>
+    <!-- Gates -->
+    <div class="intro-gate intro-gate--left"></div>
+    <div class="intro-gate intro-gate--right"></div>
+    <!-- Center content -->
+    <div class="intro-content">
+      <!-- Countdown: 3... 2... 1... -->
+      <div class="intro-countdown" id="intro-countdown">
+        <span class="countdown-number" id="countdown-num">3</span>
+      </div>
+      <div class="intro-line intro-line--1">
+        <span class="intro-text-glitch" data-text="Welcome to my world">Welcome to my world</span>
+      </div>
+      <div class="intro-line intro-line--2">
+        <span class="intro-subtitle">Where code meets creativity</span>
+      </div>
+      <div class="intro-loader">
+        <div class="intro-loader-bar"></div>
+      </div>
+      <div class="intro-line intro-line--3">
+        <span class="intro-enter">Launching...</span>
+      </div>
+    </div>
+    <!-- Floating sparks -->
+    <div class="intro-sparks" id="intro-sparks"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION BAR                                          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AP<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#extracurricular" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- HERO SECTION                                            -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <canvas id="hero-canvas" class="hero-canvas"></canvas>
+    <div class="hero-container">
+      <div class="hero-text">
+        <p class="hero-greeting reveal">Hey there, I'm</p>
+        <h1 class="hero-name reveal">Aman <span class="accent">Patel</span></h1>
+        <h2 class="hero-title reveal">
+          <span id="typing-text"></span><span class="cursor">|</span>
+        </h2>
+        <p class="hero-tagline reveal">CS student focused on Machine Learning & backend systems. Building real-world
+          applications and solving complex problems with data-driven approaches.</p>
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="#resume" class="btn btn-outline">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-socials reveal">
+          <a href="https://github.com/amanpatel9516" target="_blank" rel="noopener" class="social-link"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/amanpatellpu/" target="_blank" rel="noopener" class="social-link"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://leetcode.com/u/Aman_Patel142/" target="_blank" rel="noopener" class="social-link"
+            aria-label="LeetCode">
+            <i class="fas fa-laptop-code"></i>
+          </a>
+          <a href="https://www.geeksforgeeks.org/profile/rampatel5byd" target="_blank" rel="noopener"
+            class="social-link" aria-label="GeeksForGeeks">
+            <i class="fas fa-code"></i>
+          </a>
+          <a href="https://www.codechef.com/users/amanpatel107" target="_blank" rel="noopener" class="social-link"
+            aria-label="CodeChef">
+            <i class="fas fa-trophy"></i>
+          </a>
+          <a href="https://www.instagram.com/aman_patel7722/" target="_blank" rel="noopener" class="social-link"
+            aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image reveal" id="hero-image-wrapper">
+        <!-- ✏️ DROP YOUR PHOTO at assets/profile.jpg — it auto-loads here -->
+        <div class="hero-photo-frame" id="hero-photo-trigger" title="Click to view full photo">
+          <img src="assets/profile.jpg" alt="Aman Patel" id="profile-photo" class="hero-photo" />
+          <!-- Animated spinning border -->
+          <div class="hero-photo-border-spin"></div>
+          <!-- Glow rings -->
+          <div class="hero-photo-ring"></div>
+          <div class="hero-photo-ring hero-photo-ring--2"></div>
+          <div class="hero-photo-ring hero-photo-ring--3"></div>
+          <!-- Corner accents -->
+          <div class="hero-photo-corner hero-photo-corner--tl"></div>
+          <div class="hero-photo-corner hero-photo-corner--tr"></div>
+          <div class="hero-photo-corner hero-photo-corner--bl"></div>
+          <div class="hero-photo-corner hero-photo-corner--br"></div>
+        </div>
+        <div class="hero-photo-bg-glow"></div>
+        <!-- Status badge -->
+        <div class="hero-photo-status">
+          <span class="status-dot-green"></span> Open to work
+        </div>
+      </div>
+      <!-- Photo lightbox -->
+      <div class="photo-lightbox" id="photo-lightbox">
+        <div class="lightbox-backdrop"></div>
+        <div class="lightbox-content">
+          <img src="assets/profile.jpg" alt="Aman Patel - Full Photo" class="lightbox-img" />
+          <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- ABOUT SECTION                                           -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">01.</span> About Me
+      </h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm a Computer Science student at <strong>Lovely Professional University</strong> with a focus on
+            <strong>Machine Learning</strong> and <strong>backend systems</strong>. I apply data-driven approaches to
+            solve practical problems.
+          </p>
+          <p>From building a crop recommendation ML model to designing secure banking systems and solving 500+ DSA
+            problems — I thrive where <em>data meets real-world impact.</em> My approach: <em>understand deeply, build
+              efficiently, iterate relentlessly.</em></p>
+        </div>
+        <div class="about-cards">
+          <div class="about-card reveal">
+            <div class="about-card-icon"><i class="fas fa-robot"></i></div>
+            <h3>AI & ML Engineer</h3>
+            <p>Building ML models for real-world applications — from crop recommendation to AI training at Outlier AI.
+            </p>
+          </div>
+          <div class="about-card reveal">
+            <div class="about-card-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend Developer</h3>
+            <p>REST APIs, JWT auth, database-driven apps. Modular, maintainable, and production-ready code.</p>
+          </div>
+          <div class="about-card reveal">
+            <div class="about-card-icon"><i class="fas fa-brain"></i></div>
+            <h3>Problem Solver</h3>
+            <p>500+ DSA problems solved. Consistent practice on LeetCode, GFG & CodeChef.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SKILLS SECTION                                          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">02.</span> Skills & Toolkit
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <i class="fas fa-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Core Concepts</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Structures & Algorithms</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">Operating Systems</span>
+            <span class="skill-tag">Machine Learning</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <i class="fas fa-cogs"></i>
+            <h3>Technologies</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">JWT Authentication</span>
+            <span class="skill-tag">ML Models</span>
+            <span class="skill-tag">JDBC</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- PROJECTS SECTION                                        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">03.</span> Projects
+      </h2>
+
+      <!-- FEATURED PROJECT -->
+      <div class="project-featured reveal">
+        <div class="project-featured-badge">
+          <i class="fas fa-star"></i> Featured Project
+        </div>
+        <div class="project-featured-content">
+          <div class="project-featured-info">
+            <h3 class="project-featured-title">Aapka Bank</h3>
+            <p class="project-featured-subtitle">Secure Banking System</p>
+            <p class="project-featured-desc">
+              A complete banking application that simulates real-world financial operations. Built with secure
+              authentication, transaction management, and account handling — designed to demonstrate production-level
+              backend architecture.
+            </p>
+            <div class="project-featured-features">
+              <div class="feature-item"><i class="fas fa-check-circle"></i> JWT-based secure authentication</div>
+              <div class="feature-item"><i class="fas fa-check-circle"></i> Account creation & management</div>
+              <div class="feature-item"><i class="fas fa-check-circle"></i> Deposit, withdraw & transfer operations
+              </div>
+              <div class="feature-item"><i class="fas fa-check-circle"></i> Transaction history & audit logs</div>
+              <div class="feature-item"><i class="fas fa-check-circle"></i> RESTful API architecture</div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">JWT</span>
+              <span class="tech-tag">JDBC</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/amanpatel9516/ace-bank-lite" target="_blank" rel="noopener"
+                class="btn btn-primary btn-sm">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+              <!-- <a href="#" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a> -->
+            </div>
+          </div>
+          <div class="project-featured-visual">
+            <div class="code-window">
+              <div class="code-window-header">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+                <span class="code-window-title">AceBankLite.java</span>
+              </div>
+              <pre class="code-window-body"><code><span class="code-keyword">public class</span> <span class="code-class">AceBankLite</span> {
+  <span class="code-keyword">private</span> AccountService accounts;
+  <span class="code-keyword">private</span> AuthService auth;
+
+  <span class="code-keyword">public</span> Response <span class="code-func">transfer</span>(
+    String from, String to,
+    BigDecimal amount
+  ) {
+    auth.<span class="code-func">verify</span>(token);
+    accounts.<span class="code-func">validate</span>(from, amount);
+    <span class="code-keyword">return</span> txn.<span class="code-func">execute</span>(
+      from, to, amount
+    );
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ OTHER PROJECTS GRID ═══ -->
+      <!-- ✏️ TO ADD A NEW PROJECT: Copy any project-card block below & paste it before the closing </div> of projects-grid -->
+      <h3 class="projects-grid-title reveal"><i class="fas fa-folder-open"></i> Other Projects</h3>
+      <div class="projects-grid">
+
+        <!-- ── PROJECT 1: Portfolio Rebalancer (LIVE + DEPLOYED) ── -->
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-card-links">
+              <a href="https://github.com/amanpatel9516/valuefy_project" target="_blank" title="GitHub"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://valuefy-project-hxfz.onrender.com/" target="_blank" title="Live Demo"><i
+                  class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card-title">Portfolio Rebalancing Web App</h3>
+          <p class="project-card-desc">A full-stack portfolio rebalancing tool that compares current holdings against a
+            model portfolio, generates rebalance recommendations, and tracks history. Live and deployed on Render.</p>
+          <div class="project-tech-stack">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">REST API</span>
+          </div>
+        </div>
+
+        <!-- ── PROJECT 2: Crop Recommendation ── -->
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-card-links">
+              <a href="https://github.com/amanpatel9516" target="_blank" title="GitHub"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card-title">Crop Recommendation Model</h3>
+          <p class="project-card-desc">Machine learning model that recommends the best crop to grow based on soil and
+            weather conditions. Uses data-driven analysis for accurate predictions.</p>
+          <div class="project-tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">ML</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Scikit-learn</span>
+          </div>
+        </div>
+
+        <!-- ── PROJECT 2: News Portal (Freelance) ── -->
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-card-links">
+              <a href="https://publicnewsd.blogspot.com/" target="_blank" title="Live Site"><i
+                  class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card-title">Public News Portal</h3>
+          <p class="project-card-desc">Freelance client project — a fully functional news portal for publishing and
+            managing articles with a clean, readable design.</p>
+          <div class="project-tech-stack">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Blogger</span>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════ -->
+        <!-- ✏️ ADD MORE PROJECTS HERE — COPY THE BLOCK BELOW  -->
+        <!-- ══════════════════════════════════════════════════ -->
+        <!--
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <i class="fas fa-folder-open"></i>
+            <div class="project-card-links">
+              <a href="GITHUB_LINK_HERE" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="LIVE_DEMO_LINK_HERE" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-card-title">YOUR PROJECT NAME</h3>
+          <p class="project-card-desc">YOUR PROJECT DESCRIPTION HERE.</p>
+          <div class="project-tech-stack">
+            <span class="tech-tag">Tech1</span>
+            <span class="tech-tag">Tech2</span>
+            <span class="tech-tag">Tech3</span>
+          </div>
+        </div>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- EXPERIENCE SECTION                                      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">04.</span> Experience
+      </h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-icon"><i class="fas fa-robot"></i></div>
+            <h3>AI Trainer</h3>
+            <span class="timeline-period"><a href="https://outlier.ai/" target="_blank" rel="noopener">Outlier AI <i
+                  class="fas fa-external-link-alt" style="font-size:0.7em"></i></a></span>
+            <p>Worked as an AI Trainer contributing to training and improving machine learning models. Reviewed and
+              evaluated AI-generated outputs to enhance accuracy and performance. Focused on improving data quality and
+              model responses.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3>Freelance Developer</h3>
+            <span class="timeline-period">Independent</span>
+            <p>Delivered real-world projects for clients across different domains. Built and deployed applications based
+              on client requirements with clean, scalable code.</p>
+            <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+              <a href="https://publicnewsd.blogspot.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline"
+                style="padding:6px 14px;font-size:0.78rem"><i class="fas fa-external-link-alt"></i> Client Project 1</a>
+              <a href="https://theanuppurnews.blogspot.com/" target="_blank" rel="noopener"
+                class="btn btn-sm btn-outline" style="padding:6px 14px;font-size:0.78rem"><i
+                  class="fas fa-external-link-alt"></i> Client Project 2</a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-icon"><i class="fas fa-users-cog"></i></div>
+            <h3>Placement Committee Member</h3>
+            <span class="timeline-period">LPU</span>
+            <p>Coordinated campus recruitment drives and managed communication between companies and students.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-icon"><i class="fas fa-microphone-alt"></i></div>
+            <h3>Event Host & Anchor</h3>
+            <span class="timeline-period">College Events</span>
+            <p>Hosted multiple technical and cultural events, sharpening public speaking and audience engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- ACHIEVEMENTS & STATS SECTION                            -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="achievements" class="section achievements">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">05.</span> Achievements & Stats
+      </h2>
+
+      <!-- STATS COUNTERS -->
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">DSA Problems Solved</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="4">0</div>
+          <div class="stat-suffix">★</div>
+          <div class="stat-label">GeeksForGeeks Rating</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="2">0</div>
+          <div class="stat-suffix">★</div>
+          <div class="stat-label">CodeChef Rating</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Leadership Roles</div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS — Click name to view in cinematic mode -->
+      <div class="certs-section reveal">
+        <h3 class="certs-title"><i class="fas fa-certificate"></i> Certifications</h3>
+        <div class="certs-grid">
+          <div class="cert-card" data-cert="assets/certs/JavaNPTL.png" data-name="Java Programming — NPTEL">
+            <div class="cert-glow"></div>
+            <div class="cert-badge"><i class="fas fa-award"></i></div>
+            <div class="cert-info">
+              <h4>Java Programming</h4>
+              <p>NPTEL Certification</p>
+            </div>
+            <span class="cert-tap"><i class="fas fa-expand"></i></span>
+          </div>
+          <div class="cert-card" data-cert="assets/certs/DsaNeoColab.png" data-name="DSA — NeoColab">
+            <div class="cert-glow"></div>
+            <div class="cert-badge"><i class="fas fa-award"></i></div>
+            <div class="cert-info">
+              <h4>Data Structures & Algorithms</h4>
+              <p>NeoColab Certification</p>
+            </div>
+            <span class="cert-tap"><i class="fas fa-expand"></i></span>
+          </div>
+          <div class="cert-card" data-cert="assets/certs/Python_Udemy.png" data-name="Python — Udemy">
+            <div class="cert-glow"></div>
+            <div class="cert-badge"><i class="fas fa-award"></i></div>
+            <div class="cert-info">
+              <h4>Python Programming</h4>
+              <p>Udemy Certification</p>
+            </div>
+            <span class="cert-tap"><i class="fas fa-expand"></i></span>
+          </div>
+          <div class="cert-card" data-cert="assets/certs/ByteXl.png" data-name="ByteXl Training">
+            <div class="cert-glow"></div>
+            <div class="cert-badge"><i class="fas fa-award"></i></div>
+            <div class="cert-info">
+              <h4>ByteXl</h4>
+              <p>Training Certificate</p>
+            </div>
+            <span class="cert-tap"><i class="fas fa-expand"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate Cinematic Lightbox -->
+      <div class="cert-lightbox" id="cert-lightbox">
+        <div class="cert-lightbox-backdrop"></div>
+        <div class="cert-lightbox-content">
+          <div class="cert-lightbox-frame">
+            <div class="cert-lightbox-border-spin"></div>
+            <img src="" alt="" class="cert-lightbox-img" id="cert-lightbox-img" />
+          </div>
+          <p class="cert-lightbox-name" id="cert-lightbox-name"></p>
+          <button class="cert-lightbox-close" id="cert-lightbox-close"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- CURRENTLY DOING SECTION                                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="section currently-doing">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">06.</span> What I'm Currently Doing
+      </h2>
+      <div class="current-grid">
+        <div class="current-card reveal">
+          <div class="current-icon pulse"><i class="fas fa-robot"></i></div>
+          <h3>AI Training @ Outlier AI</h3>
+          <p>Working as an AI Trainer — improving ML model accuracy, reviewing AI outputs, and enhancing data quality.
+          </p>
+        </div>
+        <div class="current-card reveal">
+          <div class="current-icon pulse"><i class="fas fa-dumbbell"></i></div>
+          <h3>Practicing DSA Daily</h3>
+          <p>500+ problems solved across LeetCode, GFG & CodeChef. Sharpening algorithmic thinking every day.</p>
+        </div>
+        <div class="current-card reveal">
+          <div class="current-icon pulse"><i class="fas fa-laptop-code"></i></div>
+          <h3>Freelance Development</h3>
+          <p>Building and deploying real-world applications for clients — clean, scalable, production-ready code.</p>
+        </div>
+        <div class="current-card reveal">
+          <div class="current-icon pulse"><i class="fas fa-brain"></i></div>
+          <h3>Learning ML & System Design</h3>
+          <p>Deep-diving into machine learning models, backend architecture, and scalable system patterns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- WHY HIRE ME SECTION                                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="section why-hire">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">07.</span> Why Work With Me
+      </h2>
+      <div class="hire-grid">
+        <div class="hire-card reveal">
+          <div class="hire-number">01</div>
+          <h3>Real AI/ML Experience</h3>
+          <p>AI Trainer at Outlier AI — not just theory, but hands-on work improving ML models and AI-generated outputs.
+          </p>
+        </div>
+        <div class="hire-card reveal">
+          <div class="hire-number">02</div>
+          <h3>Proven Track Record</h3>
+          <p>500+ DSA problems, 4★ GFG, 2★ CodeChef, NPTEL certified, and production apps like Ace Bank Lite.</p>
+        </div>
+        <div class="hire-card reveal">
+          <div class="hire-number">03</div>
+          <h3>Freelance Client Delivery</h3>
+          <p>Delivered real projects for real clients independently — handling requirements, development & deployment
+            end-to-end.</p>
+        </div>
+        <div class="hire-card reveal">
+          <div class="hire-number">04</div>
+          <h3>Backend + ML Skills</h3>
+          <p>REST APIs, JWT auth, MySQL databases, plus ML models — I build modular, maintainable, production-ready
+            code.</p>
+        </div>
+        <div class="hire-card reveal">
+          <div class="hire-number">05</div>
+          <h3>Leadership & Communication</h3>
+          <p>From placement committee at LPU to hosting college events — proven ability to collaborate and lead.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- RESUME / CV SECTION                                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="resume" class="section resume-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">08.</span> Resume / CV
+      </h2>
+      <p class="resume-subtitle reveal">Choose the version that fits your needs — view instantly or download for later.
+      </p>
+      <div class="resume-grid">
+        <!-- Formal CV Card -->
+        <div class="resume-card reveal">
+          <div class="resume-card-bg">
+            <div class="resume-shape resume-shape--1"></div>
+            <div class="resume-shape resume-shape--2"></div>
+            <div class="resume-shape resume-shape--3"></div>
+          </div>
+          <div class="resume-card-border"></div>
+          <div class="resume-card-content">
+            <div class="resume-card-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>Formal CV</h3>
+            <p>Complete professional resume with full academic and work details, certifications, and references.</p>
+            <div class="resume-card-actions">
+              <a href="assets/resume.pdf" target="_blank" class="btn btn-primary resume-btn">
+                <i class="fas fa-eye"></i> View CV
+              </a>
+              <a href="assets/resume.pdf" download class="btn btn-outline resume-btn">
+                <i class="fas fa-download"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialized CV Card -->
+        <div class="resume-card resume-card--alt reveal">
+          <div class="resume-card-bg">
+            <div class="resume-shape resume-shape--1"></div>
+            <div class="resume-shape resume-shape--2"></div>
+            <div class="resume-shape resume-shape--3"></div>
+          </div>
+          <div class="resume-card-border"></div>
+          <div class="resume-card-content">
+            <div class="resume-card-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Specialized CV</h3>
+            <p>Targeted resume highlighting AI/ML, backend engineering skills, and key projects for tech roles.</p>
+            <div class="resume-card-actions">
+              <a href="assets/resume-specialized.pdf" target="_blank" class="btn btn-primary resume-btn">
+                <i class="fas fa-eye"></i> View CV
+              </a>
+              <a href="assets/resume-specialized.pdf" download class="btn btn-outline resume-btn">
+                <i class="fas fa-download"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- EXTRA-CURRICULAR SECTION                                -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="extracurricular" class="section extracurricular">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">09.</span> Beyond the Code
+      </h2>
+      <p class="section-subtitle reveal">Life isn't just about coding — here's the other side of me.</p>
+      <div class="gallery-grid" id="gallery-grid">
+        <!--
+          ✏️ HOW TO ADD PHOTOS:
+          1. Put your images in assets/gallery/
+          2. Copy one of the gallery-item blocks below
+          3. Update the src, alt, caption, and tag
+        -->
+        <div class="gallery-item reveal" data-category="events">
+          <div class="gallery-img-wrapper">
+            <img src="assets/gallery/event1.jpg" alt="College Event" class="gallery-img" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag"><i class="fas fa-calendar-alt"></i> Event</span>
+              <p class="gallery-caption">Hosting a college tech fest</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="ngo">
+          <div class="gallery-img-wrapper">
+            <img src="assets/gallery/ngo1.jpg" alt="NGO Activity" class="gallery-img" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag"><i class="fas fa-hands-helping"></i> NGO</span>
+              <p class="gallery-caption">Community volunteering</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="celebrity">
+          <div class="gallery-img-wrapper">
+            <img src="assets/gallery/celeb1.jpg" alt="Celebrity Meeting" class="gallery-img" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag"><i class="fas fa-star"></i> Spotlight</span>
+              <p class="gallery-caption">Meeting with an inspiring personality</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="sports">
+          <div class="gallery-img-wrapper">
+            <img src="assets/gallery/sports1.jpg" alt="Sports Activity" class="gallery-img" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag"><i class="fas fa-running"></i> Sports</span>
+              <p class="gallery-caption">Sports and fitness activities</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events">
+          <div class="gallery-img-wrapper">
+            <img src="assets/gallery/event2.jpg" alt="Cultural Event" class="gallery-img" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag"><i class="fas fa-music"></i> Cultural</span>
+              <p class="gallery-caption">Cultural festival participation</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="ngo">
+          <div class="gallery-img-wrapper">
+            <img src="assets/gallery/ngo2.jpg" alt="Social Work" class="gallery-img" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag"><i class="fas fa-heart"></i> Social</span>
+              <p class="gallery-caption">Social outreach program</p>
+            </div>
+          </div>
+        </div>
+        <!-- ✏️ ADD MORE PHOTOS: Copy any gallery-item block above, change src & caption -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- CONTACT SECTION                                         -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">10.</span> Get In Touch
+      </h2>
+      <div class="contact-content">
+        <div class="contact-text reveal">
+          <p class="contact-headline">Let's build something great together.</p>
+          <p class="contact-sub">I'm currently looking for software engineering opportunities. Whether you have a
+            position, a project idea, or just want to connect — my inbox is always open.</p>
+        </div>
+        <div class="contact-links reveal">
+          <a href="mailto:rampatel951664@gmail.com" class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-item-info">
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-value">rampatel951664@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+9516642814" class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-item-info">
+              <span class="contact-item-label">Phone</span>
+              <span class="contact-item-value">+9516642814</span>
+            </div>
+          </a>
+          <a href="https://github.com/amanpatel9516" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-item-info">
+              <span class="contact-item-label">GitHub</span>
+              <span class="contact-item-value">github.com/amanpatel9516</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/amanpatellpu/" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-item-info">
+              <span class="contact-item-label">LinkedIn</span>
+              <span class="contact-item-value">linkedin.com/in/amanpatellpu</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/aman_patel7722/" target="_blank" rel="noopener" class="contact-item">
+            <div class="contact-item-icon"><i class="fab fa-instagram"></i></div>
+            <div class="contact-item-info">
+              <span class="contact-item-label">Instagram</span>
+              <span class="contact-item-value">@aman_patel7722</span>
+            </div>
+          </a>
+        </div>
+        <a href="mailto:rampatel951664@gmail.com" class="btn btn-primary btn-lg reveal">
+          <i class="fas fa-paper-plane"></i> Say Hello
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- AI CHAT AGENT                                           -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="chat-agent" class="chat-agent">
+    <!-- Floating button -->
+    <button class="chat-fab" id="chat-fab" aria-label="Ask about Aman">
+      <i class="fas fa-robot chat-fab-icon" id="chat-fab-icon"></i>
+      <span class="chat-fab-pulse"></span>
+    </button>
+    <!-- Chat panel -->
+    <div class="chat-panel" id="chat-panel">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar"><i class="fas fa-robot"></i></div>
+          <div>
+            <h4 class="chat-header-name">Aman's AI Assistant</h4>
+            <span class="chat-header-status"><span class="status-dot"></span> Online</span>
+          </div>
+        </div>
+        <button class="chat-close" id="chat-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-msg chat-msg--bot">
+          <div class="chat-msg-avatar"><i class="fas fa-robot"></i></div>
+          <div class="chat-msg-bubble">Hey! 👋 I know everything about Aman. Ask me anything — skills, projects,
+            experience, achievements — you name it!</div>
+        </div>
+      </div>
+      <div class="chat-suggestions" id="chat-suggestions">
+        <button class="chat-suggestion" data-q="What are Aman's main skills?">Skills</button>
+        <button class="chat-suggestion" data-q="Tell me about the Ace Bank Lite project">Projects</button>
+        <button class="chat-suggestion" data-q="What are Aman's achievements?">Achievements</button>
+        <button class="chat-suggestion" data-q="What leadership roles has Aman held?">Leadership</button>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chat-input" placeholder="Ask about Aman..." autocomplete="off" />
+        <button class="chat-send" id="chat-send" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Designed & Built by <span class="accent">Aman Patel</span></p>
+      <p class="footer-sub">© 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/three-bg.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chat-agent.js"></script>
+</body>
+
+</html>
