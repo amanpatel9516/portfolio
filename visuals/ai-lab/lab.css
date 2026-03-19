@@ -1,0 +1,155 @@
+/* ═══════════════════════════════════════════════════════════
+   LAB.CSS — Interactive Neural Lab Styling
+   ═══════════════════════════════════════════════════════════ */
+
+.ai-lab-wrapper {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.ai-lab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 15px;
+}
+
+.ai-lab-title {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ai-lab-status {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.ai-lab-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+.ai-lab-visual {
+  height: 500px;
+  background: radial-gradient(circle at center, #0B0B0E 0%, #050507 100%);
+  border-radius: var(--radius-lg);
+  position: relative;
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+}
+
+#ai-lab-container {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.ai-lab-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab-panel {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.lab-panel-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.lab-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+#lab-input {
+  flex: 1;
+  background: #000;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  caret-color: var(--accent);
+  position: relative;
+  z-index: 10;
+}
+
+#lab-send-btn {
+  background: var(--accent);
+  border: none;
+  padding: 0 20px;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#lab-send-btn:hover {
+  background: var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.lab-terminal {
+  flex: 1;
+  background: #000;
+  border-left: 2px solid var(--accent);
+  padding: 15px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  height: 200px;
+  overflow-y: auto;
+  color: #00FF99;
+}
+
+.term-prompt {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.lab-sentiment-gauge {
+  background: rgba(0,0,0,0.4);
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.gauge-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 50%;
+  transition: width 1s ease;
+}
+
+@media (max-width: 968px) {
+  .ai-lab-grid {
+    grid-template-columns: 1fr;
+  }
+}

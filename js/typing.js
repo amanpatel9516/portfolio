@@ -7,11 +7,11 @@
   if (!element) return;
 
   const strings = [
-    'AI & Machine Learning Engineer',
-    'Backend Developer',
-    'Problem Solver | 500+ DSA',
-    'Freelance Developer',
-    'CS Student @ LPU'
+    'Machine Learning Engineer',
+    'AI Researcher & Trainer',
+    'Neural Network Architect',
+    'Full-Stack Developer',
+    'Problem Solver | 500+ DSA'
   ];
 
   let stringIndex = 0;

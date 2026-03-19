@@ -14,6 +14,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="visuals/ai-lab/lab.css" />
 </head>
 
 <body>
@@ -148,6 +149,12 @@
             <i class="fab fa-instagram"></i>
           </a>
         </div>
+        <!-- 🤖 AI SPECIALIST BADGE -->
+        <div class="ai-specialist-badge reveal">
+          <div class="ai-badge-icon"><i class="fas fa-brain"></i></div>
+          <div class="ai-badge-text">AI Specialist</div>
+        </div>
+      </div>
       </div>
       <div class="hero-image reveal" id="hero-image-wrapper">
         <!-- ✏️ DROP YOUR PHOTO at assets/profile.jpg — it auto-loads here -->
@@ -189,6 +196,55 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- 🔬 INTERACTIVE AI NEURAL LAB (PHASE 4)                  -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="ai-lab" class="section ai-lab">
+    <div class="container">
+      <div class="ai-lab-wrapper reveal">
+        <div class="ai-lab-header">
+          <div class="ai-lab-title"><i class="fas fa-flask"></i> NEURAL INTERACTION LAB</div>
+          <div class="ai-lab-status">
+            <span id="lab-status-text">STATE: NEUTRAL</span>
+            <span class="status-dot-green"></span>
+          </div>
+        </div>
+        
+        <div class="ai-lab-grid">
+          <!-- 3D BRAIN VISUAL -->
+          <div class="ai-lab-visual">
+            <div id="ai-lab-container"></div>
+            <div class="neural-viz-overlay">
+              <span><i class="fas fa-magic"></i> Try: "car", "chair", "pen", "1", "2", "aman"</span>
+            </div>
+          </div>
+          
+          <!-- CONTROLS & TERMINAL -->
+          <div class="ai-lab-controls">
+            <div class="lab-panel">
+              <span class="lab-panel-title">Speak to the Machine</span>
+              <div class="lab-input-group">
+                <input type="text" id="lab-input" placeholder="Type a message (e.g., 'I love AI!')" autocomplete="off" />
+                <button id="lab-send-btn"><i class="fas fa-paper-plane"></i></button>
+              </div>
+              <div class="lab-sentiment-gauge">
+                <div class="gauge-fill" id="sentiment-gauge"></div>
+              </div>
+            </div>
+            
+            <div class="lab-panel" style="flex:1; display:flex; flex-direction:column;">
+              <span class="lab-panel-title">Neural Feedback Terminal</span>
+              <div class="lab-terminal" id="lab-terminal-output">
+                <div class="term-line"><span class="term-prompt">></span> System initialized.</div>
+                <div class="term-line"><span class="term-prompt">></span> Waiting for human interaction...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
   <!-- ABOUT SECTION                                           -->
   <!-- ═══════════════════════════════════════════════════════ -->
   <section id="about" class="section about">
@@ -220,8 +276,8 @@
           </div>
           <div class="about-card reveal">
             <div class="about-card-icon"><i class="fas fa-brain"></i></div>
-            <h3>Problem Solver</h3>
-            <p>500+ DSA problems solved. Consistent practice on LeetCode, GFG & CodeChef.</p>
+            <h3>Neural Architect</h3>
+            <p>Designing and optimizing neural networks for high-impact real-world applications.</p>
           </div>
         </div>
       </div>
@@ -933,7 +989,8 @@
   </footer>
 
   <!-- SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="visuals/ai-lab/lab.js?v=13"></script>
   <script src="js/three-bg.js"></script>
   <script src="js/typing.js"></script>
   <script src="js/main.js"></script>
